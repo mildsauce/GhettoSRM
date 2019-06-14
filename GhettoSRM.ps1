@@ -337,8 +337,8 @@ Function Import-SourceVMsToDRSite {
         $ovfenvspec.VAppConfig.Property[2].info.Label = 'gateways:0'
         $ovfenvspec.VAppConfig.Property[2].info.Type = 'string'
         $ovfenvspec.VAppConfig.Property[2].info.UserConfigurable = $true
-        $ovfenvspec.VAppConfig.Property[2].info.DefaultValue = $CBDefaultGateway
-        $ovfenvspec.VAppConfig.Property[2].info.DefaultValue = $CBDefaultGateway
+        $ovfenvspec.VAppConfig.Property[2].info.DefaultValue = $DRDefaultGateway
+        $ovfenvspec.VAppConfig.Property[2].info.DefaultValue = $DRDefaultGateway
 
         # Configures DNS servers
         $ovfenvspec.VAppConfig.Property[3] = New-Object VMware.Vim.VAppPropertySpec
@@ -350,8 +350,8 @@ Function Import-SourceVMsToDRSite {
         $ovfenvspec.VAppConfig.Property[3].info.Label = 'dnsServers:0'
         $ovfenvspec.VAppConfig.Property[3].info.Type = 'string'
         $ovfenvspec.VAppConfig.Property[3].info.UserConfigurable = $true
-        $ovfenvspec.VAppConfig.Property[3].info.DefaultValue = $CBDNSServers
-        $ovfenvspec.VAppConfig.Property[3].info.DefaultValue = $CBDNSServers
+        $ovfenvspec.VAppConfig.Property[3].info.DefaultValue = $DRDNSServers
+        $ovfenvspec.VAppConfig.Property[3].info.DefaultValue = $DRDNSServers
 
 
         $NewVM.ExtensionData.ReconfigVM($ovfenvspec)
